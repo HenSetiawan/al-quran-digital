@@ -2,4 +2,4 @@
 
 ![alt text](/home.png)
 
-![alt text](/surah.png)
+![alt text](/surah_.png)
