@@ -1,27 +1,24 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import DetailsSurah from '../views/DetailsSurah.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "../views/Home.vue";
+import Surah from "../views/Surah.vue";
 
-Vue.use(VueRouter)
-
-  const routes = [
+const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/surah/:number',
-    name: 'surah',
-    component: DetailsSurah,
-    props:true
-  }
-]
+    path: "/surah/:surahNumber",
+    name: "Surah",
+    component: Surah,
+    props: true,
+  },
+];
 
-const router = new VueRouter({
-  mode:'history',
-  routes
-})
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
 
-export default router
+export default router;
